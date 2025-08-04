@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://c2m7s7t52vedw"]
+
+[ext_resource type="Script" uid="uid://dhapxlspwgvw3" path="res://teleporter.gd" id="1_tuehi"]
+[ext_resource type="Texture2D" uid="uid://81ltoliwl3va" path="res://TpTile.png" id="2_kk6yu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ahrse"]
+size = Vector2(32, 38)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cpfq8"]
+size = Vector2(32, 15)
+
+[node name="Teleporter" type="Area2D"]
+collision_layer = 4
+script = ExtResource("1_tuehi")
+
+[node name="Sprite2D" type="Sprite2D" parent="." groups=["Player"]]
+texture = ExtResource("2_kk6yu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -16)
+shape = SubResource("RectangleShape2D_ahrse")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 8.5)
+shape = SubResource("RectangleShape2D_cpfq8")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
