@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Platformer yip"
-run/main_scene="uid://dsnkwkm55iytv"
+run/main_scene="uid://hcw642tepxsv"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Deathcounter="*res://deathcounter.gd"
 
 [editor_plugins]
 
@@ -24,6 +28,8 @@ enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 Player=""
 "Level 1"=""
 "Level 2"=""
+spawn_points=""
+"Level 3"=""
 
 [input]
 

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dbaqd4f3xb8im"
+path="res://.godot/imported/teleport.ogg-2b68f2a0dc2968ba98d400c54c78c6cb.oggvorbisstr"
+
+[deps]
+
+source_file="res://game sound effects/teleport.ogg"
+dest_files=["res://.godot/imported/teleport.ogg-2b68f2a0dc2968ba98d400c54c78c6cb.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

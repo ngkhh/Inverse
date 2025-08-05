@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://c2m7s7t52vedw"]
+[gd_scene load_steps=6 format=3 uid="uid://c2m7s7t52vedw"]
 
 [ext_resource type="Script" uid="uid://dhapxlspwgvw3" path="res://teleporter.gd" id="1_tuehi"]
 [ext_resource type="Texture2D" uid="uid://81ltoliwl3va" path="res://TpTile.png" id="2_kk6yu"]
+[ext_resource type="AudioStream" uid="uid://dbaqd4f3xb8im" path="res://game sound effects/teleport.ogg" id="3_kk6yu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ahrse"]
 size = Vector2(32, 38)
@@ -27,8 +28,13 @@ position = Vector2(0, 8.5)
 shape = SubResource("RectangleShape2D_cpfq8")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 2.0
+wait_time = 3.0
 one_shot = true
+
+[node name="TeleportSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_kk6yu")
+volume_db = 5.0
+max_distance = 1e+16
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

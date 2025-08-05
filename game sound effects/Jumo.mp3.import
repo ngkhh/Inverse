@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://jen5ae88qysr"
+path="res://.godot/imported/Jumo.mp3-d22779174726503b2d0231baa51bd1fc.mp3str"
+
+[deps]
+
+source_file="res://game sound effects/Jumo.mp3"
+dest_files=["res://.godot/imported/Jumo.mp3-d22779174726503b2d0231baa51bd1fc.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
